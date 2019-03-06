@@ -10,19 +10,27 @@ import {
   trigger,
 } from '@angular/animations';
 
+const baseStyleRed = {
+  backgroundColor: 'red',
+};
+
+const baseStyleBlue = {
+  backgroundColor: 'blue',
+};
+
 export const appAnimations = [
   trigger('boxTransition', [
     state(
       'red',
       style({
-        backgroundColor: 'red'
-      }),
+      ...baseStyleRed,
+      })
     ),
 
     state(
       'blue',
       style({
-        backgroundColor: 'blue'
+        ...baseStyleBlue,
       }),
     ),
 
